@@ -1,0 +1,123 @@
+<div>
+    <h6 class = "text-center color " style="padding: 25px 0px; " >List of Unique Battle type</h6>
+  </div>
+  <div style="width:400px; margin: 0px auto;">
+      <ol class="list-group">
+          <li *ngFor = "let places of results.battleType"class="list-group-item text-center">{{places.type}}</li>
+        </ol>
+  </div>
+  <main role="main" style="padding-top: 5px">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+              <h6 class = "text-center color " >Most Active statistics</h6>
+            </div>
+          <div class="row">
+              
+              <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                 <strong class="padcenter">{{results.attacker.count}}</strong>
+                  <div class="card-body">
+                    <p class="card-text">Attacker King: {{results.attacker.attacker_king}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                   <strong class="padcenter">{{results.defender.count}}</strong>
+                    <div class="card-body">
+                      <p class="card-text">Defender King: {{results.defender.defender_king}}<br><br></p>
+                      <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm">
+                     <strong class="padcenter">{{results.region.count}}</strong>
+                      <div class="card-body">
+                        <p class="card-text">Region: {{results.region.region}}<br><br></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="card mb-4 shadow-sm">
+                       <strong class="padcenter">{{results.name.count}}</strong>
+                        <div class="card-body">
+                          <p class="card-text">Name: {{results.name.name}}<br><br></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+          <div class="row">
+              <h6 class = "text-center color " >Defender size statistics</h6>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                 <strong class="padcenter">{{results.aggregate.average | number: '1.0-0'}}</strong>
+                  <div class="card-body">
+                    <p class="card-text">Average</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                   <strong class="padcenter">{{results.aggregate.minimum || 0}}</strong>
+                    <div class="card-body">
+                      <p class="card-text">Minimum</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                     <strong class="padcenter">{{results.aggregate.maximum}}</strong>
+                      <div class="card-body">
+                        <p class="card-text">Maximum</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+
+          <div class="row">
+              <h6 class = "text-center color " >Attackers outcomes statistics</h6>
+          </div>
+          <div class="row">
+              
+              <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                 <strong class="padcenter">{{results.winLoss[0].count}}</strong>
+                  <div class="card-body">
+                    <p class="card-text">Total {{results.winLoss[0].attacker_outcome}}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card mb-4 shadow-sm">
+                   <strong class="padcenter">{{results.winLoss[1].count}}</strong>
+                    <div class="card-body">
+                      <p class="card-text">Total {{results.winLoss[1].attacker_outcome}}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          
+        </div>
+      </div>
+    </main>

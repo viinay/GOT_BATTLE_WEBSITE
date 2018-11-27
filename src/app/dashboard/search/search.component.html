@@ -1,0 +1,61 @@
+<form>
+      <div class="container">
+          <div class="row" style="padding-top:50px; ">
+  <div class="col-md-6">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name of battle</label>
+    <input [(ngModel)]="queryobj.name"  name="nameOfBattle" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Enter name of battle">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Attacker King</label>
+    <input [(ngModel)]="queryobj.attacker_king" name="attackerKing" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Enter name of attacker king">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Defender King</label>
+    <input [(ngModel)]="queryobj.defender_king" name="defenderKing" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Enter name of defender king">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Attacker Outcome</label>
+    <input [(ngModel)]="queryobj.attacker_outcome" name="attackerOutcome" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Enter attacker outcomes">
+  </div>
+  <div class="form-group">
+      <label for="exampleInputEmail1">Region</label>
+      <input [(ngModel)]="queryobj.region" name = "region" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter region">
+    </div>
+  </div>
+
+
+
+  <div class="col-md-6">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Battle type</label>
+        <input [(ngModel)]="queryobj.battle_type" name="battleType" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter battle type">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Attacker Commander</label>
+        <input [(ngModel)]="queryobj.attacker_commander" name="attackerCommander" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter attacker commander">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Defender Commander</label>
+        <input [(ngModel)]="queryobj.defender_commander" name= "defenderCommander" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter defender commander">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Location</label>
+        <input [(ngModel)]="queryobj.location" name ="location" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter location">
+      </div>
+      
+      </div>
+      </div>
+      
+        <div align="center"><br><br><button (click)="getSearchQuery()" type="submit" class="btn btn-primary">Submit</button></div>
+</div>
+</form>
