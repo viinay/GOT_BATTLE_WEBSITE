@@ -21,8 +21,8 @@ import { HttpModule } from '@angular/http';
 
 export function RestangularConfigFactory(RestangularProvider) {
   
-  RestangularProvider.setBaseUrl("http://localhost:3000");
-  RestangularProvider.setDefaultHeaders({'Access-Control-Allow-Origin' : 'http://localhost:3000', "Content-Type": "application/json"});
+  RestangularProvider.setBaseUrl("https://test-app-123412.herokuapp.com");
+  RestangularProvider.setDefaultHeaders({'Access-Control-Allow-Origin' : 'https://test-app-123412.herokuapp.com', "Content-Type": "application/json"});
 }
 @NgModule({
   declarations: [

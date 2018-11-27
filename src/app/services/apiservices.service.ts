@@ -69,7 +69,7 @@ export class APIservicesService {
 
   getSearchResult(params,cb) {
     console.log('getSearchResult , params ',params)
-    this._http.get('http://localhost:3000'+constants.APIS.GET_SEARCH,{params:params})
+    this._http.get('https://test-app-123412.herokuapp.com'+constants.APIS.GET_SEARCH,{params:params})
       .subscribe(data=>{
         console.log(data)
         if(cb) cb(null, data.json())
