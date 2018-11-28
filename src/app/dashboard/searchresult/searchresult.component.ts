@@ -22,6 +22,6 @@ export class SearchresultComponent implements OnInit {
     console.log(" constants in search result", constants.GLOBAL.nameOfBattles)
    setTimeout(() => {
     this.queryRes = constants.GLOBAL.nameOfBattles 
-   }, 300);
+   }, 700);
   }
 }
